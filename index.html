@@ -131,9 +131,9 @@ main .wrapper {
 </head>
 <body>
     <main>
-        <div class="header"><span>chat with ...8923</span><input type="checkbox" onclick="event.preventDefault();" ondblclick="this.checked = !this.checked; enable_i(this.checked)"></div>
+        <div class="header"><span>chat with ...8923</span><input type="checkbox"></div>
         <div class="chat"></div>
-        <div class="wrapper"><textarea placeholder="message" oninput="autoResize()"></textarea><span onclick="send()">></span></div>
+        <div class="wrapper" ondblclick="this.dataset.checked = !this.dataset.checked; enable_i(this.dataset.checked)"><textarea placeholder="message" oninput="autoResize()"></textarea><span onclick="send()">></span></div>
     </main>
 <script>
 document.querySelector(".header input").checked = false;
@@ -169,4 +169,5 @@ function enable_i(state) {
 }
 </script>
 </body>
+
 </html>
