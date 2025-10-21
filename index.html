@@ -162,7 +162,7 @@ function add_message(text, type) {
     const mess = document.createElement('span');
     mess.dataset.original = text;
     let formatted = "";
-    document.querySelector(".header input").checked == false? formatted = text.replace(/\*(.*?)\*/g, "").replace(/\n\*(.*?)\*/g, "").replace(/\n{3,}/g, '\n\n').trim() : formatted = text.replace(/\*(.*?)\*/g, "<i class='i'>$1</i>");
+    document.querySelector(".wrapper span")dataset.checked === "false"? formatted = text.replace(/\*(.*?)\*/g, "").replace(/\n\*(.*?)\*/g, "").replace(/\n{3,}/g, '\n\n').trim() : formatted = text.replace(/\*(.*?)\*/g, "<i class='i'>$1</i>");
     mess.innerHTML = formatted;
     mess.classList.add("message", type)
     document.querySelector('.chat').appendChild(mess);
@@ -183,6 +183,7 @@ function enable_i(state) {
 </body>
 
 </html>
+
 
 
 
