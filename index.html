@@ -136,7 +136,7 @@ main .wrapper {
         <div class="chat"></div>
         <div class="wrapper">
             <textarea placeholder="message" oninput="autoResize()"></textarea>
-            <span onclick="if (input.value.trim() != '') send()" data-checked="false" ondblclick="this.dataset.checked = (this.dataset.checked === 'true') ? 'false' : 'true'; enable_i(this.dataset.checked)">➤</span>
+            <span onclick="if (input.value.trim() != '') send()" data-checked="false" ondblclick="this.dataset.checked = (this.dataset.checked === 'true') ? 'false' : 'true'; enable_i(this.dataset.checked === 'true')">➤</span>
         </div>
     </main>
 <script>
@@ -175,6 +175,7 @@ function enable_i(state) {
 </body>
 
 </html>
+
 
 
 
